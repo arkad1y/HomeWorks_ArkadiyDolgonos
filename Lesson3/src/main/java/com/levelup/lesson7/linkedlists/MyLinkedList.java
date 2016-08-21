@@ -2,10 +2,6 @@ package com.levelup.lesson7.linkedlists;
 
 import com.levelup.lesson3.task1.Pen;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
 /**
  * Created by admin on 21.08.2016.
  */
@@ -137,9 +133,9 @@ public class MyLinkedList<T> {
         this.size = size;
     }
 
-    
 
     public static void main(String[] args) {
+
 
         MyLinkedList<Pen> pens = new MyLinkedList<>();
         pens.add(new Pen("red", "a", 0));
@@ -148,9 +144,9 @@ public class MyLinkedList<T> {
         pens.add(new Pen("red4", "a4", 4));
         pens.add(new Pen("red5", "a5", 5));
 
-        System.out.println("size:"+pens.getSize());
+        System.out.println("size:" + pens.getSize());
         pens.remove(3);
-        System.out.println("size:"+pens.getSize());
+        System.out.println("size:" + pens.getSize());
 
 
     }
