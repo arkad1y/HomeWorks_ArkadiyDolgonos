@@ -11,6 +11,12 @@ public class Pen {
     public Pen() {
     }
 
+    public Pen(String color, String producerName, int id) {
+        this.color = color;
+        this.producerName = producerName;
+        this.id = id;
+    }
+
     public String getColor() {
         return color;
     }
@@ -62,4 +68,6 @@ public class Pen {
                 ", id=" + id +
                 '}';
     }
+
+
 }
