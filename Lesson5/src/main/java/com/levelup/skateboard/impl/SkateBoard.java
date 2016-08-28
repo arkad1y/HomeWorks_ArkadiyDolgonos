@@ -78,6 +78,7 @@ public class SkateBoard implements ISkateBoard {
 
     @Override
     public boolean setBoard(Board board) {
+
         if (board.isOk()) {
             this.board = board;
             return true;
@@ -99,4 +100,6 @@ public class SkateBoard implements ISkateBoard {
         this.wheels = wheels;
         return true;
     }
+
+
 }
