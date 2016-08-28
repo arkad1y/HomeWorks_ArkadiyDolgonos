@@ -53,6 +53,9 @@ public class Board {
         this.boardType = boardType;
     }
 
+    /**
+     * @return
+     */
     public boolean jump() {
         jumpCount++;
         if (jumpCount <= boardType.getMaxJumpCount()) {

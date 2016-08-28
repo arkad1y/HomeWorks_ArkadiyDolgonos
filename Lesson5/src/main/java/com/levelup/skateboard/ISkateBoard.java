@@ -5,10 +5,8 @@ import com.levelup.skateboard.wheel.Wheel;
 
 import java.util.List;
 
-/**
- * Created by admin on 28.08.2016.
- */
-public interface ISkateBoard {
+public interface ISkateBoard {//main functions of any skateboard
+
     boolean jump();
 
     boolean rideForward(int distance);

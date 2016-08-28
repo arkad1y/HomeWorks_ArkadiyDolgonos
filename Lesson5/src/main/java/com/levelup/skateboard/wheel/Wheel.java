@@ -4,24 +4,24 @@ package com.levelup.skateboard.wheel;
 import com.levelup.skateboard.Side;
 import com.levelup.skateboard.exceptions.WheelWornOutException;
 
-public class Wheel {
+public class Wheel {//describe simple skateboard wheel and main functionality
     private String name;
-    private BearingType bearingType;
-    private int distance;
+    private BearingType bearingType; // store bearing type
+    private int distance; //save the pasted distance of wheel
 
-    public Wheel() {
+    public Wheel() {// create wheel with default parameters
         name = "default";
         bearingType = BearingType.ROLLING;
 
     }
 
-    public Wheel(String name, BearingType bearingType, int distance) {
+    public Wheel(String name, BearingType bearingType, int distance) { // create wheel from incoming parameters
         this.name = name;
         this.bearingType = bearingType;
         this.distance = distance;
     }
 
-    public Wheel(String name, BearingType bearingType) {
+    public Wheel(String name, BearingType bearingType) {// create wheel with name and bearing type
         this.name = name;
         this.bearingType = bearingType;
     }
@@ -50,7 +50,8 @@ public class Wheel {
         this.distance = distance;
     }
 
-    public boolean run(int distance, Side side) {
+    public boolean run(int distance, Side side) {//try to run. if passed distance more than max possible distance -
+        // we throw WheelWornOutException. if ok - just add input distance to passed distance
         this.distance += distance;
         if (this.distance > bearingType.getMaxDistance()) {
             throw new WheelWornOutException("your distance: " + this.distance);
@@ -60,7 +61,8 @@ public class Wheel {
 
     public boolean isOk() {
         return distance < bearingType.getMaxDistance();
-    }
+    }//check passed distance and max possible
+    // distance
 
     @Override
     public String toString() {
